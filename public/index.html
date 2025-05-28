@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мій ToDo List</h1>
+        
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="Введіть нове завдання..." maxlength="200">
+            <button id="addBtn">Додати</button>
+        </div>
+        
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Всі</button>
+            <button class="filter-btn" data-filter="pending">Активні</button>
+            <button class="filter-btn" data-filter="completed">Виконані</button>
+        </div>
+        
+        <div class="tasks-container">
+            <ul id="tasksList"></ul>
+        </div>
+        
+        <div class="stats">
+            <span id="tasksCount">Всього завдань: 0</span>
+        </div>
+        
+        <div id="loading" class="loading hidden">Завантаження...</div>
+        <div id="error" class="error hidden"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
